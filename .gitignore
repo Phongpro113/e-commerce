@@ -16,7 +16,9 @@
 wordpress/*
 
 # Chỉ giữ lại thư mục custom code (bỏ comment dòng dưới khi có)
-# !wordpress/wp-content/themes/your-custom-theme/
+!wordpress/wp-content/
+!wordpress/wp-content/themes/
+!wordpress/wp-content/themes/shopee-clone/
 # !wordpress/wp-content/plugins/your-custom-plugin/
 
 # =============================================================================
@@ -36,13 +38,13 @@ wp-content/plugins/wordpress-seo/
 wp-content/plugins/wps-hide-login/
 
 # Themes mặc định WordPress — không dùng
-wp-content/themes/twentytwentythree/
-wp-content/themes/twentytwentyfour/
-wp-content/themes/twentytwentyfive/
+wordpress/wp-content/themes/twentytwentythree/
+wordpress/wp-content/themes/twentytwentyfour/
+wordpress/wp-content/themes/twentytwentyfive/
 
 # Theme Astra gốc — cài lại bằng WP-CLI
 # Chỉ commit astra-child nếu có custom code
-wp-content/themes/astra/
+wordpress/wp-content/themes/astra/
 
 # Cache & log
 wp-content/cache/
