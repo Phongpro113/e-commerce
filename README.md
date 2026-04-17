@@ -23,7 +23,8 @@ Website bán hàng trực tuyến xây dựng trên nền tảng WordPress và W
 | URL | Mô tả |
 |---|---|
 | `http://localhost:8080` | Website frontend |
-| `http://localhost:8080/wp-admin` | Trang quản trị WordPress |
+| `http://localhost:8080/wp-login.php` | Trang đăng nhập WordPress |
+| `http://localhost:8080/wp-admin` | Trang quản trị (sau khi đăng nhập) |
 | `http://localhost:8080/shop` | Trang danh sách sản phẩm |
 | `http://localhost:8081` | phpMyAdmin — quản lý database |
 
@@ -75,13 +76,15 @@ e-commerce/
 
 ## Plugin đã cài đặt
 
-| Plugin | Version | Mục đích |
-|---|---|---|
-| WooCommerce | 10.7.0 | Core bán hàng |
-| Yoast SEO | 27.4 | Tối ưu SEO |
-| LiteSpeed Cache | 7.8.1 | Tăng tốc website |
-| UpdraftPlus | 1.26.2 | Backup tự động |
-| WPS Hide Login | 1.9.18 | Bảo mật trang đăng nhập |
+| Plugin | Version | Mục đích | Trạng thái |
+|---|---|---|---|
+| WooCommerce | 10.7.0 | Core bán hàng | Bật |
+| Yoast SEO | 27.4 | Tối ưu SEO | Bật |
+| LiteSpeed Cache | 7.8.1 | Tăng tốc website | Bật |
+| UpdraftPlus | 1.26.2 | Backup tự động | Bật |
+| WPS Hide Login | 1.9.18 | Ẩn trang đăng nhập (chỉ dùng production) | Tắt (local) |
+
+> **Lưu ý:** WPS Hide Login chỉ bật trên production. Ở local giữ tắt để truy cập `/wp-admin` bình thường.
 
 ---
 

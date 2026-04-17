@@ -120,10 +120,13 @@ Mở trình duyệt:
 | URL | Mô tả |
 |---|---|
 | `http://localhost:8080` | Website frontend |
-| `http://localhost:8080/wp-admin` | Trang quản trị WordPress |
+| `http://localhost:8080/wp-login.php` | Trang đăng nhập WordPress |
+| `http://localhost:8080/wp-admin` | Trang quản trị (sau khi đăng nhập) |
 | `http://localhost:8081` | phpMyAdmin — quản lý database |
 
 Đăng nhập admin bằng `WP_ADMIN_USER` / `WP_ADMIN_PASSWORD` đã đặt trong `.env`.
+
+> **Lưu ý:** Plugin WPS Hide Login được cài sẵn nhưng **tắt ở local**. Chỉ bật trên production sau khi đã cấu hình custom login URL.
 
 ---
 
