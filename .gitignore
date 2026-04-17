@@ -59,6 +59,7 @@ wp-content/debug.log
 wp-content/index.php
 wp-content/plugins/index.php
 wp-content/themes/index.php
+wp-content/themes/
 
 # =============================================================================
 # DATABASE
