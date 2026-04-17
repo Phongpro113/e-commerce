@@ -1,0 +1,126 @@
+# =============================================================================
+# ENVIRONMENT & SECRETS
+# =============================================================================
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.cert
+
+# =============================================================================
+# WORDPRESS CORE
+# Không commit core WordPress — cài lại qua Docker image
+# =============================================================================
+wp-admin/
+wp-includes/
+wp-*.php
+index.php
+xmlrpc.php
+license.txt
+readme.html
+
+# =============================================================================
+# WP-CONTENT — chỉ giữ custom code, bỏ qua thư viện bên thứ 3
+# =============================================================================
+
+# Uploads (ảnh, media) — quá nặng, không thuộc source code
+wp-content/uploads/
+
+# Plugins cài từ WordPress.org — cài lại bằng WP-CLI hoặc Composer
+wp-content/plugins/akismet/
+wp-content/plugins/hello.php
+wp-content/plugins/litespeed-cache/
+wp-content/plugins/updraftplus/
+wp-content/plugins/woocommerce/
+wp-content/plugins/wordpress-seo/
+wp-content/plugins/wps-hide-login/
+
+# Themes mặc định WordPress — không dùng
+wp-content/themes/twentytwentythree/
+wp-content/themes/twentytwentyfour/
+wp-content/themes/twentytwentyfive/
+
+# Theme Astra gốc — cài lại bằng WP-CLI
+# Chỉ commit astra-child nếu có custom code
+wp-content/themes/astra/
+
+# Cache & log
+wp-content/cache/
+wp-content/litespeed/
+wp-content/upgrade/
+wp-content/uploads/wc-logs/
+wp-content/uploads/woocommerce_uploads/
+wp-content/debug.log
+*.log
+
+# File index placeholder của WordPress
+wp-content/index.php
+wp-content/plugins/index.php
+wp-content/themes/index.php
+
+# =============================================================================
+# DATABASE
+# =============================================================================
+*.sql
+*.sql.gz
+*.dump
+
+# =============================================================================
+# DOCKER
+# =============================================================================
+# Volume data — sinh ra khi chạy, không commit
+docker-volumes/
+
+# =============================================================================
+# BACKUP FILES
+# =============================================================================
+*.bak
+*.backup
+*.tar.gz
+*.zip
+backup_*/
+wp-content_*/
+
+# =============================================================================
+# OS & EDITOR
+# =============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+
+# JetBrains (PHPStorm, WebStorm)
+.idea/
+*.iml
+
+# Vim
+*.swp
+*.swo
+
+# =============================================================================
+# NODE (nếu dùng build tool cho theme/plugin custom)
+# =============================================================================
+node_modules/
+npm-debug.log*
+yarn-error.log
+.npm
+.yarn-integrity
+
+# Build output
+dist/
+build/
+assets/build/
