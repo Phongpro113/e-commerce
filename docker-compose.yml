@@ -29,8 +29,7 @@ services:
       WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD}
       WORDPRESS_TABLE_PREFIX: ${WORDPRESS_TABLE_PREFIX:-wc_}
     volumes:
-      - wp_data:/var/www/html
-      - ./wp-content:/var/www/html/wp-content
+      - ./wordpress:/var/www/html
     networks:
       - wp_network
 
@@ -51,7 +50,6 @@ services:
 
 volumes:
   db_data:
-  wp_data:
 
 networks:
   wp_network:

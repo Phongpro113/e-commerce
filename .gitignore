@@ -10,15 +10,14 @@
 
 # =============================================================================
 # WORDPRESS CORE
-# Không commit core WordPress — cài lại qua Docker image
+# Toàn bộ core WordPress — cài lại qua Docker image, không cần commit
+# Chỉ commit custom theme/plugin bạn tự viết trong wp-content/
 # =============================================================================
-wp-admin/
-wp-includes/
-wp-*.php
-index.php
-xmlrpc.php
-license.txt
-readme.html
+wordpress/*
+
+# Chỉ giữ lại thư mục custom code (bỏ comment dòng dưới khi có)
+# !wordpress/wp-content/themes/your-custom-theme/
+# !wordpress/wp-content/plugins/your-custom-plugin/
 
 # =============================================================================
 # WP-CONTENT — chỉ giữ custom code, bỏ qua thư viện bên thứ 3
